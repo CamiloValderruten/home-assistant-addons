@@ -8,7 +8,20 @@ description: Homebridge - HomeKit support for the impatient
 host_network: true
 image: homebridge/homebridge
 init: false
-host_dbus: true
+
+
+
+host_network: true
+host_dbus: true                # map host D-Bus into the add-on
+udev: true
+usb: true                      # if you use a USB BT dongle
+privileged:
+  - NET_RAW
+  - NET_ADMIN
+devices:
+  - /dev/hci0                  # OR map the whole USB bus: /dev/bus/usb
+
+
 map:
 - path: /homebridge
   read_only: false
@@ -21,9 +34,5 @@ ports_description:
   8581/tcp: Homebridge UI
 slug: homebridge
 url: https://hub.docker.com/r/homebridge/homebridge
-version: '2025-08-20'
+version: '2025-08-25'
 webui: http://[HOST]:[PORT:8581]
-usb: true                 # maps /dev/bus/usb into the container (often needed)
-udev: true                # exposes udev so devices show up
-devices:
-  - /dev/hci0 
