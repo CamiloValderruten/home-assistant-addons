@@ -23,3 +23,7 @@ slug: homebridge
 url: https://hub.docker.com/r/homebridge/homebridge
 version: '2025-08-20'
 webui: http://[HOST]:[PORT:8581]
+usb: true                 # maps /dev/bus/usb into the container (often needed)
+udev: true                # exposes udev so devices show up
+devices:
+  - /dev/hci0 
