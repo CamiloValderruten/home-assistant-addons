@@ -21,7 +21,7 @@ privileged:
 devices:
   - /dev/hci0                  # OR map the whole USB bus: /dev/bus/usb
 environment:
-  ENABLE_AVAHI: 0
+  ENABLE_AVAHI: "0"
 
 
 map:
