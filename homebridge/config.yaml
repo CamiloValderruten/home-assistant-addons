@@ -8,6 +8,8 @@ description: Homebridge - HomeKit support for the impatient
 host_network: true
 image: homebridge/homebridge
 init: false
+host_dbus: true
+privileged: true
 map:
 - path: /homebridge
   read_only: false
