@@ -22,6 +22,8 @@ devices:
   - /dev/hci0                  # OR map the whole USB bus: /dev/bus/usb
 environment:
   ENABLE_AVAHI: "0"
+  NOBLE_HCI_DEVICE_ID: "0"       # force Noble to use hci0
+  NOBLE_REPORT_ALL_HCI_EVENTS: "1"
 
 
 map:
